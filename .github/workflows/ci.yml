@@ -1,0 +1,19 @@
+name: monorepo-ci
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  deno:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - run: deno --version
+      - run: deno fmt --check
+      - run: deno lint
+      - run: deno task test

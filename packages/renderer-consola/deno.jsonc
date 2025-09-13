@@ -1,0 +1,5 @@
+{
+  "name": "kagespect-renderer-consola",
+  "exports": "./mod.ts",
+  "nodeModulesDir": true
+}

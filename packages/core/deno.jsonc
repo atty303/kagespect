@@ -1,0 +1,5 @@
+{
+  "name": "kagespect-core",
+  "exports": "./mod.ts",
+  "lint": { "rules": { "exclude": ["dist/**"] } }
+}

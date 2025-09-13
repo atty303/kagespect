@@ -1,0 +1,17 @@
+{
+  // Monorepo root
+  "lock": false,
+  "workspace": [
+    "packages/core",
+    "packages/renderer-consola"
+  ],
+  "imports": {
+    "kagespect/core/": "./packages/core/src/",
+    "kagespect/core": "./packages/core/mod.ts"
+  },
+  "tasks": {
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "test": "deno test -A --coverage=coverage"
+  }
+}
